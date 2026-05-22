@@ -202,6 +202,12 @@ Set connection timeout:
 go-check-ssl-certs -file domains.txt -timeout 5s
 ```
 
+Hide the startup banner for cleaner piped output:
+
+```bash
+go-check-ssl-certs -file domains.txt -no-banner
+```
+
 ## Full Command Reference
 
 ```
@@ -226,6 +232,8 @@ Usage of go-check-ssl-certs:
         SMTP username
   -file string
         Path to a file containing URLs/domains (one per line)
+  -no-banner
+        Disable banner output
   -no-color
         Disable color output in terminal mode
   -notify-on string
