@@ -1,7 +1,7 @@
 # Builds for Mac, Linux, and Windows (both amd64 and arm64)
 
 APP_NAME=go-check-ssl-certs
-VERSION=0.1.0
+VERSION=0.1.1
 BUILD_DIR=./build
 MAIN_FILE=./main.go
 LDFLAGS=-ldflags "-s -w -X main.toolVersion=${VERSION}"

@@ -1,0 +1,6 @@
+a52106c5f6024151b2e9b0c0abb8229938e8918e369d232de82c6970dda94a2f  go-check-ssl-certs-darwin-amd64.zip
+e8b3b17e162ca0c4d099133a8077f8c051b4b975f530b7b5614a057445495d38  go-check-ssl-certs-darwin-arm64.zip
+bca66f2a47c4128b0b8e038d3c72f3d5042993baaef9564ee9b77e97026e0336  go-check-ssl-certs-windows-amd64.zip
+afe29c38e915911074cd6a28fedade9682bb290823bfc52df3406c9dbe33acea  go-check-ssl-certs-windows-arm64.zip
+856fb0c76a596c0814ba1b5be2294f9d30240b58a40a2fea1070672168262344  go-check-ssl-certs-linux-amd64.tar.gz
+a7df527e4f4a60bfb8dd68f6c7386d685af40eaee6a095d514ad523e8af55d6e  go-check-ssl-certs-linux-arm64.tar.gz

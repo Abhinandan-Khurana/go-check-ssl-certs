@@ -6,7 +6,7 @@
   <a href="https://goreportcard.com/report/github.com/Abhinandan-Khurana/go-check-ssl-certs"><img src="https://goreportcard.com/badge/github.com/Abhinandan-Khurana/go-check-ssl-certs" alt="Go Report Card"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
   <a href="https://golang.org/doc/devel/release.html"><img src="https://img.shields.io/badge/Go-1.23+-00ADD8.svg" alt="Go Version"></a>
-<img src="https://img.shields.io/badge/version-v0.1.0-blue.svg" alt="Version">
+<img src="https://img.shields.io/badge/version-v0.1.1-blue.svg" alt="Version">
 </p>
 
 A powerful, flexible SSL certificate monitoring tool that checks the validity and expiration dates of SSL certificates for multiple domains. Built with Go for speed and efficiency.
@@ -324,7 +324,7 @@ jobs:
           
       - name: Download go-check-ssl-certs
         run: |
-          curl -L https://github.com/Abhinandan-Khurana/go-check-ssl-certs/releases/download/v0.1.0/go-check-ssl-certs-linux-amd64.tar.gz -o ssl-checker.tar.gz
+          curl -L https://github.com/Abhinandan-Khurana/go-check-ssl-certs/releases/download/v0.1.1/go-check-ssl-certs-linux-amd64.tar.gz -o ssl-checker.tar.gz
           tar -xzf ssl-checker.tar.gz
           chmod +x go-check-ssl-certs
           
@@ -360,7 +360,7 @@ check-ssl-certificates:
   image: golang:1.21-alpine
   script:
     - apk add --no-cache curl tar
-    - curl -L https://github.com/Abhinandan-Khurana/go-check-ssl-certs/releases/download/v0.1.0/go-check-ssl-certs-linux-amd64.tar.gz -o ssl-checker.tar.gz
+    - curl -L https://github.com/Abhinandan-Khurana/go-check-ssl-certs/releases/download/v0.1.1/go-check-ssl-certs-linux-amd64.tar.gz -o ssl-checker.tar.gz
     - tar -xzf ssl-checker.tar.gz
     - chmod +x go-check-ssl-certs
     - go-check-ssl-certs -file domains.txt -output json > ssl-results.json
@@ -389,7 +389,7 @@ pipeline {
         stage('Check SSL Certificates') {
             steps {
                 sh '''
-                curl -L https://github.com/Abhinandan-Khurana/go-check-ssl-certs/releases/download/v0.1.0/go-check-ssl-certs-linux-amd64.tar.gz -o ssl-checker.tar.gz
+                curl -L https://github.com/Abhinandan-Khurana/go-check-ssl-certs/releases/download/v0.1.1/go-check-ssl-certs-linux-amd64.tar.gz -o ssl-checker.tar.gz
                 tar -xzf ssl-checker.tar.gz
                 chmod +x go-check-ssl-certs
                 go-check-ssl-certs -file domains.txt -output json > ssl-results.json

@@ -22,7 +22,7 @@ import (
 	"github.com/fatih/color"
 )
 
-const toolVersion = "0.1.0"
+const toolVersion = "0.1.1"
 
 // CertInfo holds the result for a single domain check
 type CertInfo struct {
