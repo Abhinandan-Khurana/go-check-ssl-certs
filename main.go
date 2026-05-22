@@ -58,6 +58,7 @@ var (
 	debug                = flag.Bool("debug", false, "Enable debug logging")
 	showVersion          = flag.Bool("version", false, "Show version and exit")
 	noColor              = flag.Bool("no-color", false, "Disable color output in terminal mode")
+	noBanner             = flag.Bool("no-banner", false, "Disable banner output")
 	timeout              = flag.Duration("timeout", 10*time.Second, "Connection timeout per domain")
 	notifySlackURL       = flag.String("slack-webhook", "", "Slack webhook URL for notifications")
 	notifyTelegramToken  = flag.String("telegram-token", "", "Telegram Bot Token")
@@ -104,7 +105,7 @@ func printBanner() {
 	fmt.Println(headerColor(banner))
 	color.New(color.FgYellow).Printf("                          	Version: %s\n", toolVersion)
 	color.New(color.FgRed).Println("                   Made by Abhinandan-Khurana (@l0u51f3r007)")
-	fmt.Println("----------------------------------------------------------------------------------------\n")
+	fmt.Print("----------------------------------------------------------------------------------------\n\n")
 }
 
 func main() {
@@ -115,8 +116,9 @@ func main() {
 		os.Exit(0)
 	}
 
-	printBanner()
-
+	if !*noBanner {
+		printBanner()
+	}
 	if *noColor || *outputFormat != "terminal" {
 		disableColors()
 	}
